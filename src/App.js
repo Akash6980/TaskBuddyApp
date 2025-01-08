@@ -29,7 +29,7 @@ export default function App() {
   const clearTask = () => {
     setTasks([]);
   };
-  
+
   return (
     <div className='App'>
       <header className="bg-gray-900 py-6 px-4 shadow-md">
@@ -42,9 +42,9 @@ export default function App() {
     </header>
       <TaskForm addTask={addTask}/>
       <ProgressTracker tasks={tasks}/>
-      <TaskList task={tasks}
+      <TaskList tasks={tasks}
       updateTask={updateTask}
-      deleteTask={deleteTask}/>
+      deleteTask={deleteTask} />
 
       {tasks.length>0 && (
         <button className="clear-btn" onClick={clearTask}>
